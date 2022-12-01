@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Porte : MonoBehaviour
+public class Piège : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()

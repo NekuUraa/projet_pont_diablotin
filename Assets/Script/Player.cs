@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -11,11 +12,14 @@ public class Player : MonoBehaviour
     public bool desacMouvBack = false;
     public bool desacMouvRight = false;
     public bool desacMouvLeft = false;
+    public bool brique = false;
 
 
     public GameObject[] gardes;
 
     public int key = 0;
+
+    public int P_life = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +61,14 @@ public class Player : MonoBehaviour
         
     }
 
+    public void checkDefaite()
+    {
+        if (P_life <= 0)
+        {
+            SceneManager.LoadScene("SampleScene");
+            Debug.Log("Vous êtes mort");
+        }
+    }
 
     void AfterMovementLogic() {
         for (int i = 0; i < gardes.Length; i++)
@@ -85,6 +97,7 @@ public class Player : MonoBehaviour
 
             if (hit.transform.tag == "Brique")
             {
+                brique = true;
                 Destroy(GameObject.FindWithTag("Brique"));
 
                 for (int i = 0; i < gardes.Length; i++)
@@ -151,7 +164,7 @@ public class Player : MonoBehaviour
         }
 
 
-
+         
 
     }
 
