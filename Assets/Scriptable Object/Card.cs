@@ -8,6 +8,9 @@ public class Card : ScriptableObject
     public new string name;
     public string description;
 
-    public Texture artwork;
+
+    public Texture2D artwork;
+
+    public Material cardMaterial;
 
 }
