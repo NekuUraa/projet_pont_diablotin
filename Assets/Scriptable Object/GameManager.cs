@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviour
     public State state;
     public GameObject player;
 
-    public TextMeshProUGUI UItext;
+    public Canvas UItext;
+
     // Start is called before the first frame update
     void Start()
     {

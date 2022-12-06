@@ -26,10 +26,6 @@ public class Player_scriptable : MonoBehaviour
             Move();
         }
 
-       
-
-        
-
     }
 
 
