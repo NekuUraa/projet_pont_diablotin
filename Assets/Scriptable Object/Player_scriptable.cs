@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using TMPro;
 
 public class Player_scriptable : MonoBehaviour
 {
 
     public GameObject gameManager;
-    private State state;
+    public GameManager gmScript;
+    public State state;
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +21,15 @@ public class Player_scriptable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
+        //CE QUI SE PASSE A CHAQUE FRAME A L'ETAT MOVE
         if(state == State.MOVE){
             Move();
         }
+
+       
+
+        
+
     }
 
 
@@ -58,7 +65,17 @@ public class Player_scriptable : MonoBehaviour
     {
         gameManager.GetComponent<GameManager>().ChangeState();
         state = gameManager.GetComponent<GameManager>().state;
-        Debug.Log("Oui je marche");
+        //other.gameObject.faisTesTrucsDeCarte();
+        //other.gameObject.faisTesTrucsSpéciaux();
+        Debug.Log("Je suis passé dans le FLIP");
+        gmScript.UItext.enabled = true;
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+
+        other.enabled = false;
+        gmScript.UItext.enabled = false;
     }
 
 }
