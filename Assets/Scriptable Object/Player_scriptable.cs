@@ -61,17 +61,16 @@ public class Player_scriptable : MonoBehaviour
     {
         gameManager.GetComponent<GameManager>().ChangeState();
         state = gameManager.GetComponent<GameManager>().state;
+        gameManager.GetComponent<GameManager>().CurrentCard= other.GetComponent<Card>();
         //other.gameObject.faisTesTrucsDeCarte();
         //other.gameObject.faisTesTrucsSpéciaux();
         Debug.Log("Je suis passé dans le FLIP");
-        gmScript.UItext.enabled = true;
     }
 
     public void OnTriggerExit(Collider other)
     {
 
         other.enabled = false;
-        gmScript.UItext.enabled = false;
     }
 
 }

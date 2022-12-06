@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum State {MOVE, FLIP_CARD, UI_TURN}
 
@@ -10,8 +11,14 @@ public class GameManager : MonoBehaviour
      
     public State state;
     public GameObject player;
+    public Card CurrentCard;
 
     public Canvas UItext;
+
+    public TextMeshProUGUI Cardname;
+    public TextMeshProUGUI CardDescription;
+    public RawImage Cardartwork;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +29,7 @@ public class GameManager : MonoBehaviour
     public void Update()
     {
 
-
+        Debug.Log(UItext.enabled);
 
         if (state == State.UI_TURN) 
         {
@@ -50,7 +57,12 @@ public class GameManager : MonoBehaviour
                 Debug.Log("FLIP");
                 state = State.UI_TURN;
                 player.GetComponent<Player_scriptable>().state = state;
+                
                 UItext.enabled = true;
+                //Ne se relance pas ?   
+                Cardname.SetText(CurrentCard.name);
+                CardDescription.SetText(CurrentCard.description);
+                Cardartwork.material.SetTexture("_BaseMap", CurrentCard.artwork);
                 break;
             
             case State.UI_TURN:
