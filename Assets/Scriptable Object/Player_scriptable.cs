@@ -60,8 +60,8 @@ public class Player_scriptable : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         gameManager.GetComponent<GameManager>().ChangeState();
-        state = gameManager.GetComponent<GameManager>().state;
-        gameManager.GetComponent<GameManager>().CurrentCard= other.GetComponent<Card>();
+        state = gameManager.GetComponent<GameManager>().state;  
+        gameManager.GetComponent<GameManager>().CurrentCard = other.gameObject.GetComponent<CardDisplay>().card;
         //other.gameObject.faisTesTrucsDeCarte();
         //other.gameObject.faisTesTrucsSpéciaux();
         Debug.Log("Je suis passé dans le FLIP");

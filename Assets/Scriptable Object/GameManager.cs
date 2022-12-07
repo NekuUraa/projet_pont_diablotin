@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     public void Update()
     {
 
-        Debug.Log(UItext.enabled);
+        Debug.Log(CurrentCard.name);
 
         if (state == State.UI_TURN) 
         {
@@ -54,18 +54,18 @@ public class GameManager : MonoBehaviour
                 break;
             
             case State.FLIP_CARD:
+
                 Debug.Log("FLIP");
                 state = State.UI_TURN;
-                player.GetComponent<Player_scriptable>().state = state;
-                
+                player.GetComponent<Player_scriptable>().state = state; 
                 UItext.enabled = true;
-                //Ne se relance pas ?   
                 Cardname.SetText(CurrentCard.name);
                 CardDescription.SetText(CurrentCard.description);
                 Cardartwork.material.SetTexture("_BaseMap", CurrentCard.artwork);
                 break;
             
             case State.UI_TURN:
+                    
                 Debug.Log("UI TURN");
                 state = State.MOVE;
                 player.GetComponent<Player_scriptable>().state = state;
