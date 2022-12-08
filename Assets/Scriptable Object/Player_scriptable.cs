@@ -15,14 +15,22 @@ public class Player_scriptable : MonoBehaviour
     public bool hasKeys = false;
     public bool hasBrique = false;
 
+    public bool moveForward = true;
+    public bool moveLeft = true;
+    public bool moveRight = true;
+    public bool moveBack = true;
 
-    // Start is called before the first frame update
+
+    public float distanceRay = 3f;
+
+
+    
     void Start()
     {
         state = gameManager.GetComponent<GameManager>().state;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         //CE QUI SE PASSE A CHAQUE FRAME A L'ETAT MOVE
@@ -32,6 +40,12 @@ public class Player_scriptable : MonoBehaviour
 
     }
 
+    void FixedUpdate()
+    {
+        Raycasting();
+    }
+
+   
 
     public void Move()
     {
@@ -39,25 +53,101 @@ public class Player_scriptable : MonoBehaviour
         //AVANCER
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            transform.position += Vector3.forward * 3f;
+            if (moveForward)
+            {
+                transform.position += Vector3.forward * 3f;
+            }
         }
 
         //RECULER
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            transform.position += Vector3.forward * -3f;
+            if (moveBack)
+            {
+                transform.position += Vector3.forward * -3f;
+            }
         }
 
         //DROITE
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            transform.position += Vector3.right * 3f;
+            if (moveRight)
+            {
+                transform.position += Vector3.right * 3f;
+            }
         }
 
         //GAUCHE
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            transform.position += Vector3.left * 3f;
+            if (moveLeft)
+            {
+                transform.position += Vector3.left * 3f;
+            }
+        }
+    }
+
+    public void Raycasting()
+    {
+        RaycastHit hit;
+
+        // Rayon devant
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.back), out hit, distanceRay))
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.back) * hit.distance, Color.green);
+            Debug.Log("Did Hit");
+            moveForward = false;
+        }
+        else
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.back) * distanceRay, Color.red);
+            Debug.Log("Did not Hit");
+            moveForward = true;
+        }
+
+        //Rayon derrière
+
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, distanceRay))
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.green);
+            Debug.Log("Did Hit");
+            moveBack = false;
+        }
+        else
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * distanceRay, Color.red);
+            Debug.Log("Did not Hit");
+            moveBack = true;
+        }
+
+        //Rayon droite
+
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hit, distanceRay))
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * hit.distance, Color.green);
+            Debug.Log("Did Hit");
+            moveLeft = false;
+        }
+        else
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * distanceRay, Color.red);
+            Debug.Log("Did not Hit");
+            moveLeft = true;
+        }
+
+        //Rayon gauche
+
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hit, distanceRay))
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * hit.distance, Color.green);
+            Debug.Log("Did Hit");
+            moveRight = false;
+        }
+        else
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * distanceRay, Color.red);
+            Debug.Log("Did not Hit");
+            moveRight = true;
         }
     }
 
