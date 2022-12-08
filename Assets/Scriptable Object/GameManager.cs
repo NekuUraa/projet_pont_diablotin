@@ -29,7 +29,6 @@ public class GameManager : MonoBehaviour
     public void Update()
     {
 
-        Debug.Log(CurrentCard.name);
 
         if (state == State.UI_TURN) 
         {
@@ -61,7 +60,6 @@ public class GameManager : MonoBehaviour
                 UItext.enabled = true;
                 Cardname.SetText(CurrentCard.name);
                 CardDescription.SetText(CurrentCard.description);
-                Cardartwork.material.SetTexture("_BaseMap", CurrentCard.artwork);
                 break;
             
             case State.UI_TURN:

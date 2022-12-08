@@ -11,6 +11,10 @@ public class Player_scriptable : MonoBehaviour
     public GameManager gmScript;
     public State state;
 
+    public Card CurrentCard;
+    public bool hasKeys = false;
+    public bool hasBrique = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +61,16 @@ public class Player_scriptable : MonoBehaviour
         }
     }
 
+    public void getKeys()
+    {
+        hasKeys = true;
+    }
+
+    public void getBrique()
+    {
+        hasBrique = true;
+    }
+
     public void OnTriggerEnter(Collider other)
     {
         gameManager.GetComponent<GameManager>().ChangeState();
@@ -64,13 +78,20 @@ public class Player_scriptable : MonoBehaviour
         gameManager.GetComponent<GameManager>().CurrentCard = other.gameObject.GetComponent<CardDisplay>().card;
         //other.gameObject.faisTesTrucsDeCarte();
         //other.gameObject.faisTesTrucsSpéciaux();
-        Debug.Log("Je suis passé dans le FLIP");
-    }
 
-    public void OnTriggerExit(Collider other)
-    {
+        if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Cle")
+        {
+            getKeys();
+        }
+
+        if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Brique")
+        {
+            getBrique();
+        }
 
         other.enabled = false;
     }
+
+
 
 }
