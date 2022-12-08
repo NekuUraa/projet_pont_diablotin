@@ -97,6 +97,11 @@ public class Player_scriptable : MonoBehaviour
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.back) * hit.distance, Color.green);
             Debug.Log("Did Hit");
             moveForward = false;
+
+            if (hit.transform.tag == "Porte" && hasKeys == true)
+            {
+                Destroy(GameObject.FindWithTag("Porte"));
+            }
         }
         else
         {
