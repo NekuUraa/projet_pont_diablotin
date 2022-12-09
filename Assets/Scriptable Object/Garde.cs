@@ -42,9 +42,10 @@ public class Garde : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+
         if (other.GetComponent<Collider>().CompareTag("Player"))
         {
-            //Perte de vie  
+            Debug.Log("Oui je touche le joueur");
         }
     }
 

@@ -12,7 +12,8 @@ public class Player_scriptable : MonoBehaviour
     public State state;
 
     public Card CurrentCard;
-    public Garde garde;
+    public Garde garde1;
+    public Garde garde2;
 
     public bool hasKeys = false;
     public bool hasBrique = false;
@@ -58,7 +59,8 @@ public class Player_scriptable : MonoBehaviour
             if (moveForward)
             {
                 transform.position += Vector3.forward * 3f;
-                garde.UpdateIA();
+                garde1.UpdateIA();
+                garde2.UpdateIA();
             }
 
 
@@ -71,7 +73,8 @@ public class Player_scriptable : MonoBehaviour
             if (moveBack)
             {
                 transform.position += Vector3.forward * -3f;
-                garde.UpdateIA();
+                garde1.UpdateIA();
+                garde2.UpdateIA();
             }
         }
 
@@ -81,7 +84,8 @@ public class Player_scriptable : MonoBehaviour
             if (moveRight)
             {
                 transform.position += Vector3.right * 3f;
-                garde.UpdateIA();
+                garde1.UpdateIA();
+                garde2.UpdateIA();
             }
         }
 
@@ -91,7 +95,8 @@ public class Player_scriptable : MonoBehaviour
             if (moveLeft)
             {
                 transform.position += Vector3.left * 3f;
-                garde.UpdateIA();
+                garde1.UpdateIA();
+                garde2.UpdateIA();
             }
         }
     }
@@ -174,6 +179,8 @@ public class Player_scriptable : MonoBehaviour
     {
         hasBrique = true;
     }
+
+   
 
     public void OnTriggerEnter(Collider other)
     {
