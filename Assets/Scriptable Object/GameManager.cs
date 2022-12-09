@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
      
     public State state;
     public GameObject player;
+    public Transform garde1;
+    public Transform garde2; 
     public Card CurrentCard;
 
     public Canvas UItext;
@@ -39,7 +41,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ChangeState(){
+    public void ChangeState()
+    {
 
 
 
@@ -72,5 +75,15 @@ public class GameManager : MonoBehaviour
             
         }
 
+    }
+
+    public void CheckGuardCollision(Transform garde)
+    {
+        Vector3 delta = garde.position - player.transform.position;
+        Debug.Log(delta.magnitude);
+        if(delta.magnitude < 3.5)
+        {
+            Debug.Log("delta.magnitude < 1");
+        }
     }
 }

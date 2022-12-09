@@ -269,6 +269,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   player: {fileID: 1619688657}
+  garde1: {fileID: 1483097245}
+  garde2: {fileID: 1907536662}
   CurrentCard: {fileID: 11400000, guid: 3d8d30d2360225e4a9153624a4eebeb6, type: 2}
   UItext: {fileID: 1150542766}
   Cardname: {fileID: 736933124}
@@ -3254,7 +3256,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636377629}
   m_LocalRotation: {x: -0.094637536, y: -0.25123033, z: -0.03210099, w: 0.9627547}
-  m_LocalPosition: {x: 0, y: 5.08, z: 80}
+  m_LocalPosition: {x: 32.14, y: 4.55, z: 98.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7590,7 +7592,6 @@ GameObject:
   - component: {fileID: 1483097245}
   - component: {fileID: 1483097244}
   - component: {fileID: 1483097243}
-  - component: {fileID: 1483097247}
   - component: {fileID: 1483097241}
   - component: {fileID: 1483097246}
   m_Layer: 0
@@ -7695,19 +7696,6 @@ MonoBehaviour:
   Direction: 0
   NumDirection: -3
   player: {fileID: 0}
---- !u!65 &1483097247
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483097239}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 9.999999, y: 0.078205705, z: 10}
-  m_Center: {x: 0, y: -0.039102852, z: 0}
 --- !u!1 &1483505700
 GameObject:
   m_ObjectHideFlags: 0
@@ -9346,7 +9334,6 @@ GameObject:
   - component: {fileID: 1907536662}
   - component: {fileID: 1907536661}
   - component: {fileID: 1907536660}
-  - component: {fileID: 1907536664}
   - component: {fileID: 1907536658}
   - component: {fileID: 1907536663}
   m_Layer: 0
@@ -9451,19 +9438,6 @@ MonoBehaviour:
   Direction: 0
   NumDirection: 3
   player: {fileID: 0}
---- !u!65 &1907536664
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1907536657}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 9.999999, y: 0.10448408, z: 10}
-  m_Center: {x: 0, y: -0.05224204, z: 0}
 --- !u!1 &1961191691
 GameObject:
   m_ObjectHideFlags: 0
