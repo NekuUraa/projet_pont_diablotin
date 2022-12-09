@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class Player_scriptable : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Player_scriptable : MonoBehaviour
     public Card CurrentCard;
     public Garde garde1;
     public Garde garde2;
+    public Camera camera;
 
     public bool hasKeys = false;
     public bool hasBrique = false;
@@ -26,10 +28,14 @@ public class Player_scriptable : MonoBehaviour
 
     public float distanceRay = 3f;
 
+    public Vector3 cameraTargetPos;
+
 
     
     void Start()
     {
+        cameraTargetPos = camera.transform.position;
+
         state = gameManager.GetComponent<GameManager>().state;
     }
 
@@ -40,6 +46,8 @@ public class Player_scriptable : MonoBehaviour
         if(state == State.MOVE){
             Move();
         }
+
+        camera.transform.position = Vector3.Lerp(camera.transform.position, cameraTargetPos, Time.deltaTime*2f);
 
     }
 
@@ -53,12 +61,14 @@ public class Player_scriptable : MonoBehaviour
     public void Move()
     {
 
+        Vector2 _targetPos = Vector2.zero;
+
         //AVANCER
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             if (moveForward)
             {
-                transform.position += Vector3.forward * 3f;
+                _targetPos.y  = 1;
                 garde1.UpdateIA();
                 garde2.UpdateIA();
             }
@@ -72,7 +82,7 @@ public class Player_scriptable : MonoBehaviour
         {
             if (moveBack)
             {
-                transform.position += Vector3.forward * -3f;
+                _targetPos.y = -1;
                 garde1.UpdateIA();
                 garde2.UpdateIA();
             }
@@ -83,7 +93,7 @@ public class Player_scriptable : MonoBehaviour
         {
             if (moveRight)
             {
-                transform.position += Vector3.right * 3f;
+                _targetPos.x= 1;
                 garde1.UpdateIA();
                 garde2.UpdateIA();
             }
@@ -94,11 +104,14 @@ public class Player_scriptable : MonoBehaviour
         {
             if (moveLeft)
             {
-                transform.position += Vector3.left * 3f;
+                _targetPos.x = -1;
                 garde1.UpdateIA();
                 garde2.UpdateIA();
             }
         }
+
+        transform.position = new Vector3(transform.position.x + _targetPos.x * 3f, transform.position.y, transform.position.z +_targetPos.y * 3f);
+        cameraTargetPos = new Vector3(cameraTargetPos.x + _targetPos.x * 3f, cameraTargetPos.y, cameraTargetPos.z + _targetPos.y * 3f);
     }
 
     public void Raycasting()
@@ -186,7 +199,7 @@ public class Player_scriptable : MonoBehaviour
     {
         gameManager.GetComponent<GameManager>().ChangeState();
         state = gameManager.GetComponent<GameManager>().state;  
-        gameManager.GetComponent<GameManager>().CurrentCard = other.gameObject.GetComponent<CardDisplay>().card;
+        gameManager.GetComponent<GameManager>().CurrentCard = other.gameObject.GetComponent<CardDisplay>().card;    
         //other.gameObject.faisTesTrucsDeCarte();
         //other.gameObject.faisTesTrucsSpéciaux();
 
@@ -195,12 +208,12 @@ public class Player_scriptable : MonoBehaviour
             getKeys();
         }
 
-        if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Brique")
-        {
-            getBrique();
-        }
 
-        other.enabled = false;
+
+        if (gameManager.GetComponent<GameManager>().CurrentCard.ID == 1)
+        {
+            other.enabled = false;
+        }
     }
 
 

@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Brique
   description: "Brique a r\xE9cup\xE9rer"
+  ID: 1
   artwork: {fileID: 2800000, guid: f33a1196445bd7e41a539cf778b75954, type: 3}
   cardMaterial: {fileID: 0}

@@ -7,6 +7,7 @@ public class Card : ScriptableObject
 {
     public new string name;
     public string description;
+    public int ID;
 
 
     public Texture2D artwork;

@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Garde
   description: 
+  ID: 2
   artwork: {fileID: 2800000, guid: 1bc3b8da6f6c25645a41ff93c9b15abb, type: 3}
   cardMaterial: {fileID: 0}
