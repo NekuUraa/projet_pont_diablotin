@@ -47,14 +47,14 @@ public class GameManager : MonoBehaviour
         {
             case State.MOVE: 
                 
-                Debug.Log("BOUGE");
+                //Debug.Log("BOUGE");
                 state = State.FLIP_CARD;
                 player.GetComponent<Player_scriptable>().state = state;
                 break;
             
             case State.FLIP_CARD:
 
-                Debug.Log("FLIP");
+                //Debug.Log("FLIP");
                 state = State.UI_TURN;
                 player.GetComponent<Player_scriptable>().state = state; 
                 UItext.enabled = true;
@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
             
             case State.UI_TURN:
                     
-                Debug.Log("UI TURN");
+                //Debug.Log("UI TURN");
                 state = State.MOVE;
                 player.GetComponent<Player_scriptable>().state = state;
                 UItext.enabled = false;

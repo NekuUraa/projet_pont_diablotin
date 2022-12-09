@@ -122,7 +122,7 @@ public class Player_scriptable : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.back), out hit, distanceRay))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.back) * hit.distance, Color.green);
-            Debug.Log("Did Hit");
+            //Debug.Log("Did Hit");
             moveForward = false;
 
             if (hit.transform.tag == "Porte" && hasKeys == true)
@@ -133,7 +133,7 @@ public class Player_scriptable : MonoBehaviour
         else
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.back) * distanceRay, Color.red);
-            Debug.Log("Did not Hit");
+            //Debug.Log("Did not Hit");
             moveForward = true;
         }
 
@@ -142,13 +142,13 @@ public class Player_scriptable : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, distanceRay))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.green);
-            Debug.Log("Did Hit");
+            //Debug.Log("Did Hit");
             moveBack = false;
         }
         else
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * distanceRay, Color.red);
-            Debug.Log("Did not Hit");
+            //Debug.Log("Did not Hit");
             moveBack = true;
         }
 
@@ -157,13 +157,13 @@ public class Player_scriptable : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hit, distanceRay))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * hit.distance, Color.green);
-            Debug.Log("Did Hit");
+            //Debug.Log("Did Hit");
             moveLeft = false;
         }
         else
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * distanceRay, Color.red);
-            Debug.Log("Did not Hit");
+            //Debug.Log("Did not Hit");
             moveLeft = true;
         }
 
@@ -172,23 +172,23 @@ public class Player_scriptable : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hit, distanceRay))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * hit.distance, Color.green);
-            Debug.Log("Did Hit");
+            //Debug.Log("Did Hit");
             moveRight = false;
         }
         else
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * distanceRay, Color.red);
-            Debug.Log("Did not Hit");
+            //Debug.Log("Did not Hit");
             moveRight = true;
         }
     }
 
-    public void getKeys()
+    public void GetKeys()
     {
         hasKeys = true;
     }
 
-    public void getBrique()
+    public void GetBrique()
     {
         hasBrique = true;
     }
@@ -197,21 +197,26 @@ public class Player_scriptable : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        gameManager.GetComponent<GameManager>().ChangeState();
-        state = gameManager.GetComponent<GameManager>().state;  
-        gameManager.GetComponent<GameManager>().CurrentCard = other.gameObject.GetComponent<CardDisplay>().card;    
-        //other.gameObject.faisTesTrucsDeCarte();
-        //other.gameObject.faisTesTrucsSpéciaux();
-
-        if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Cle")
-        {
-            getKeys();
-        }
-
-
 
         if (gameManager.GetComponent<GameManager>().CurrentCard.ID == 1)
         {
+            Debug.Log("Je touche une carte et je change de tour");
+            gameManager.GetComponent<GameManager>().ChangeState();
+            state = gameManager.GetComponent<GameManager>().state;
+            gameManager.GetComponent<GameManager>().CurrentCard = other.gameObject.GetComponent<CardDisplay>().card;
+            //other.gameObject.faisTesTrucsDeCarte();
+            //other.gameObject.faisTesTrucsSpéciaux();
+
+            if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Cle")
+            {
+                GetKeys();
+            }
+
+            if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Brique")
+            {
+                GetBrique();
+            }
+
             other.enabled = false;
         }
     }
