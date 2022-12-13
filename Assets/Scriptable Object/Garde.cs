@@ -9,7 +9,8 @@ public class Garde : MonoBehaviour
     public bool Direction = false;
     public float NumDirection = 3;
 
-    public Player player;
+    public Player_scriptable player;
+    public GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,7 @@ public class Garde : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log(player.P_Life);
     }
 
     public void UpdateIA()
@@ -46,6 +47,8 @@ public class Garde : MonoBehaviour
         if (other.GetComponent<Collider>().CompareTag("Player"))
         {
             Debug.Log("Oui je touche le joueur");
+            player.P_Life -= 1;
+            gameManager.ChangeState();
         }
     }
 

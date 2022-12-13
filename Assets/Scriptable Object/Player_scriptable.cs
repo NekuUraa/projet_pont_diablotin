@@ -17,6 +17,8 @@ public class Player_scriptable : MonoBehaviour
     public Garde garde2;
     public Camera camera;
 
+    public int P_Life = 3;
+
     public bool hasKeys = false;
     public bool hasBrique = false;
 
@@ -200,7 +202,9 @@ public class Player_scriptable : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
 
-        if (gameManager.GetComponent<GameManager>().CurrentCard.ID == 1)
+        
+
+            if (gameManager.GetComponent<GameManager>().CurrentCard.ID == 1)
         {
             //Debug.Log("Je touche une carte et je change de tour");
             gameManager.GetComponent<GameManager>().ChangeState();
@@ -221,6 +225,18 @@ public class Player_scriptable : MonoBehaviour
             }
 
             other.enabled = false;
+        }
+
+        if (gameManager.GetComponent<GameManager>().CurrentCard.ID == 2)
+        {
+            Debug.Log("Carte fin");
+            gameManager.GetComponent<GameManager>().ChangeState();
+            state = gameManager.GetComponent<GameManager>().state;
+            gameManager.GetComponent<GameManager>().CurrentCard = other.gameObject.GetComponent<CardDisplay>().card;
+
+            other.enabled = true;
+
+
         }
     }
 
