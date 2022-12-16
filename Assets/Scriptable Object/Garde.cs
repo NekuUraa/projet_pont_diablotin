@@ -9,7 +9,9 @@ public class Garde : MonoBehaviour
     public bool Direction = false;
     public float NumDirection = 3;
 
-    public Player player;
+    public GameObject gameManager;
+    public GameManager gmScript;
+    public Card CurrentCard;
 
     // Start is called before the first frame update
     void Start()
@@ -43,10 +45,9 @@ public class Garde : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
 
-        if (other.GetComponent<Collider>().CompareTag("Player"))
-        {
-            Debug.Log("Oui je touche le joueur");
-        }
+        Debug.Log(CurrentCard.name);
+
+
     }
 
     void FixedUpdate()

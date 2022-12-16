@@ -14,7 +14,6 @@ public class Player_scriptable : MonoBehaviour
 
     public Card CurrentCard;
     public Garde garde1;
-    public Garde garde2;
     public Camera camera;
 
     public bool hasKeys = false;
@@ -27,6 +26,7 @@ public class Player_scriptable : MonoBehaviour
 
 
     public float distanceRay = 3f;
+    public float distanceRayDown = 2.5f;
 
     public Vector3 cameraTargetPos;
 
@@ -110,9 +110,7 @@ public class Player_scriptable : MonoBehaviour
     public void AfterMove()
     {
         garde1.UpdateIA();
-        garde2.UpdateIA();
-        gmScript.CheckGuardCollision(garde1.transform);
-        gmScript.CheckGuardCollision(garde2.transform);
+        //gmScript.CheckGuardCollision(garde1.transform);
 
     }
 
@@ -182,6 +180,19 @@ public class Player_scriptable : MonoBehaviour
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * distanceRay, Color.red);
             //Debug.Log("Did not Hit");
             moveRight = true;
+        }
+
+        //Rayon Bas
+
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, distanceRayDown))
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * hit.distance, Color.green);
+            //Debug.Log("Did Hit");
+        }
+        else
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * distanceRayDown, Color.red);
+            //Debug.Log("Did not Hit");
         }
     }
 
