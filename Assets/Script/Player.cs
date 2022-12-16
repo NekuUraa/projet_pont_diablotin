@@ -61,6 +61,10 @@ public class Player : MonoBehaviour
         
     }
 
+
+  
+
+
     public void checkDefaite()
     {
         if (P_life <= 0)

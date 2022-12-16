@@ -12,6 +12,7 @@ public class Garde : MonoBehaviour
     public GameObject gameManager;
     public GameManager gmScript;
     public Card CurrentCard;
+    public Player_scriptable player;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class Garde : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void UpdateIA()
@@ -45,9 +46,16 @@ public class Garde : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
 
-        Debug.Log(CurrentCard.name);
+        
 
+        if (other.GetComponent<Collider>().CompareTag("Player"))
+        {
+            Debug.Log(Time.frameCount);
 
+            Debug.Log("Oui je touche le joueur");
+            player.ChangeLife(-0.5f);
+            //gameManager.ChangeState();
+        }
     }
 
     void FixedUpdate()

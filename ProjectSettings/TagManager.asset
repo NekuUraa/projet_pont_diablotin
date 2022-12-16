@@ -6,8 +6,8 @@ TagManager:
   tags:
   - Porte
   - Brique
-  - Test
   - Carte
+  - Fin
   layers:
   - Default
   - TransparentFX

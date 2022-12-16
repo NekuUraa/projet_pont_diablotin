@@ -14,7 +14,10 @@ public class Player_scriptable : MonoBehaviour
 
     public Card CurrentCard;
     public Garde garde1;
-    public Camera camera;
+    public Garde garde2;
+    public Camera cameraL;
+
+    public float P_Life = 3;
 
     public bool hasKeys = false;
     public bool hasBrique = false;
@@ -31,10 +34,14 @@ public class Player_scriptable : MonoBehaviour
     public Vector3 cameraTargetPos;
 
 
+    private float damageCooldown = 0.5f;
+
+    private float damageCooldownCounter = 0f;
+
     
     void Start()
     {
-        cameraTargetPos = camera.transform.position;
+        cameraTargetPos = cameraL.transform.position;
 
         state = gameManager.GetComponent<GameManager>().state;
     }
@@ -42,12 +49,20 @@ public class Player_scriptable : MonoBehaviour
     
     void Update()
     {
+
+
+
         //CE QUI SE PASSE A CHAQUE FRAME A L'ETAT MOVE
         if(state == State.MOVE){
             Move();
         }
 
-        camera.transform.position = Vector3.Lerp(camera.transform.position, cameraTargetPos, Time.deltaTime*2f);
+        cameraL.transform.position = Vector3.Lerp(cameraL.transform.position, cameraTargetPos, Time.deltaTime*2f);
+
+        //Compteur frames invulnerabilitï¿½
+        damageCooldownCounter -= Time.deltaTime;
+
+        noMoreLife();
 
     }
 
@@ -110,7 +125,7 @@ public class Player_scriptable : MonoBehaviour
     public void AfterMove()
     {
         garde1.UpdateIA();
-        //gmScript.CheckGuardCollision(garde1.transform);
+        garde2.UpdateIA();
 
     }
 
@@ -137,7 +152,7 @@ public class Player_scriptable : MonoBehaviour
             moveForward = true;
         }
 
-        //Rayon derrière
+        //Rayon derriï¿½re
 
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, distanceRay))
         {
@@ -206,19 +221,41 @@ public class Player_scriptable : MonoBehaviour
         hasBrique = true;
     }
 
-   
+   public void noMoreLife()
+    {
+        if(P_Life <= 0)
+        {
+            //SceneManager.LoadScene("Menu");
+         }
+    }
+
+
+    public void ChangeLife(float _modifier)
+    {
+
+        if (damageCooldownCounter > 0f)
+            return;
+
+        P_Life += _modifier;
+
+        damageCooldownCounter = damageCooldown;
+
+        Debug.Log(P_Life);
+    }
 
     public void OnTriggerEnter(Collider other)
     {
 
         if (gameManager.GetComponent<GameManager>().CurrentCard.ID == 1)
         {
+            Debug.Log("OUIOUI");
+
             //Debug.Log("Je touche une carte et je change de tour");
             gameManager.GetComponent<GameManager>().ChangeState();
             state = gameManager.GetComponent<GameManager>().state;
             gameManager.GetComponent<GameManager>().CurrentCard = other.gameObject.GetComponent<CardDisplay>().card;
             //other.gameObject.faisTesTrucsDeCarte();
-            //other.gameObject.faisTesTrucsSpéciaux();
+            //other.gameObject.faisTesTrucsSpï¿½ciaux();
             other.transform.rotation = Quaternion.Euler(0, 90, 0);
 
             if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Cle")
@@ -232,6 +269,18 @@ public class Player_scriptable : MonoBehaviour
             }
 
             other.enabled = false;
+        }
+
+        if (gameManager.GetComponent<GameManager>().CurrentCard.ID == 2)
+        {
+
+            gameManager.GetComponent<GameManager>().ChangeState();
+            state = gameManager.GetComponent<GameManager>().state;
+            gameManager.GetComponent<GameManager>().CurrentCard = other.gameObject.GetComponent<CardDisplay>().card;
+
+            other.enabled = true;
+
+
         }
     }
 
