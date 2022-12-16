@@ -21,7 +21,7 @@ public class Garde : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(player.P_Life);
+        
     }
 
     public void UpdateIA()
@@ -44,11 +44,15 @@ public class Garde : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
 
+        
+
         if (other.GetComponent<Collider>().CompareTag("Player"))
         {
+            Debug.Log(Time.frameCount);
+
             Debug.Log("Oui je touche le joueur");
-            player.P_Life -= 1;
-            gameManager.ChangeState();
+            player.ChangeLife(-0.5f);
+            //gameManager.ChangeState();
         }
     }
 

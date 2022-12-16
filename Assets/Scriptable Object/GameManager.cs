@@ -77,13 +77,4 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void CheckGuardCollision(Transform garde)
-    {
-        Vector3 delta = garde.position - player.transform.position;
-        //Debug.Log(delta.magnitude);
-        if(delta.magnitude < 3.5)
-        {
-            //Debug.Log("delta.magnitude < 1");
-        }
-    }
 }
