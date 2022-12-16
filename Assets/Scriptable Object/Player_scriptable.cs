@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class Player_scriptable : MonoBehaviour
 {
@@ -50,6 +51,8 @@ public class Player_scriptable : MonoBehaviour
         }
 
         camera.transform.position = Vector3.Lerp(camera.transform.position, cameraTargetPos, Time.deltaTime*2f);
+
+        noMoreLife();
 
     }
 
@@ -197,7 +200,14 @@ public class Player_scriptable : MonoBehaviour
         hasBrique = true;
     }
 
-   
+   public void noMoreLife()
+    {
+        if(P_Life <= 0)
+        {
+            Debug.Log("Le joueur est mort");
+            SceneManager.LoadScene("ScriptableObject");
+         }
+    }
 
     public void OnTriggerEnter(Collider other)
     {
@@ -229,7 +239,6 @@ public class Player_scriptable : MonoBehaviour
 
         if (gameManager.GetComponent<GameManager>().CurrentCard.ID == 2)
         {
-            Debug.Log("Carte fin");
             gameManager.GetComponent<GameManager>().ChangeState();
             state = gameManager.GetComponent<GameManager>().state;
             gameManager.GetComponent<GameManager>().CurrentCard = other.gameObject.GetComponent<CardDisplay>().card;
