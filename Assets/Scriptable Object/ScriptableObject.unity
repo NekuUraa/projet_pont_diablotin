@@ -6632,8 +6632,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Direction: 0
   NumDirection: -3
+  gameManager: {fileID: 0}
+  gmScript: {fileID: 0}
+  CurrentCard: {fileID: 0}
   player: {fileID: 1619688663}
-  gameManager: {fileID: 48060121}
 --- !u!65 &1483097247
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7044,7 +7046,7 @@ MonoBehaviour:
   CurrentCard: {fileID: 11400000, guid: 3d8d30d2360225e4a9153624a4eebeb6, type: 2}
   garde1: {fileID: 1483097246}
   garde2: {fileID: 1907536663}
-  camera: {fileID: 1961191693}
+  cameraL: {fileID: 1961191693}
   P_Life: 3
   hasKeys: 0
   hasBrique: 0
@@ -7053,6 +7055,7 @@ MonoBehaviour:
   moveRight: 1
   moveBack: 1
   distanceRay: 1.5
+  distanceRayDown: 2.5
   cameraTargetPos: {x: 0, y: 0, z: 0}
 --- !u!65 &1619688664
 BoxCollider:
@@ -7626,8 +7629,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Direction: 0
   NumDirection: 3
-  player: {fileID: 0}
   gameManager: {fileID: 0}
+  gmScript: {fileID: 0}
+  CurrentCard: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1001 &1917481629
 PrefabInstance:
   m_ObjectHideFlags: 0

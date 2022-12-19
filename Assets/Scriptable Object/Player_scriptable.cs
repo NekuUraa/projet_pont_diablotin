@@ -252,6 +252,8 @@ public class Player_scriptable : MonoBehaviour
 
             //Debug.Log("Je touche une carte et je change de tour");
             gameManager.GetComponent<GameManager>().ChangeState();
+            //Permet de changer de tours
+            gameManager.GetComponent<GameManager>().ChangeState();
             state = gameManager.GetComponent<GameManager>().state;
             gameManager.GetComponent<GameManager>().CurrentCard = other.gameObject.GetComponent<CardDisplay>().card;
             //other.gameObject.faisTesTrucsDeCarte();
