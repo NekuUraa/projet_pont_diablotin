@@ -53,10 +53,11 @@ public class Garde : MonoBehaviour
             Debug.Log(Time.frameCount);
 
             Debug.Log("Oui je touche le joueur");
-            player.ChangeLife(-0.5f);
+            player.ChangeLife(-1f);
             //gameManager.ChangeState();
         }
     }
+
 
     void FixedUpdate()
     {

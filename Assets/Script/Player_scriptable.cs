@@ -13,8 +13,10 @@ public class Player_scriptable : MonoBehaviour
     public State state;
 
     public Card CurrentCard;
-    public Garde garde1;
+    public Garde1 garde1;
+    public Garde1 carte1;
     public Garde garde2;
+    public GameObject endCard;
     public Camera cameraL;
 
     public float P_Life = 3;
@@ -125,6 +127,7 @@ public class Player_scriptable : MonoBehaviour
     public void AfterMove()
     {
         garde1.UpdateIA();
+        carte1.UpdateIA();
         garde2.UpdateIA();
 
     }
@@ -246,11 +249,6 @@ public class Player_scriptable : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
 
-        if (gameManager.GetComponent<GameManager>().CurrentCard.ID == 1)
-        {
-            Debug.Log("OUIOUI");
-
-            //Debug.Log("Je touche une carte et je change de tour");
             gameManager.GetComponent<GameManager>().ChangeState();
             //Permet de changer de tours
             gameManager.GetComponent<GameManager>().ChangeState();
@@ -258,7 +256,6 @@ public class Player_scriptable : MonoBehaviour
             gameManager.GetComponent<GameManager>().CurrentCard = other.gameObject.GetComponent<CardDisplay>().card;
             //other.gameObject.faisTesTrucsDeCarte();
             //other.gameObject.faisTesTrucsSp�ciaux();
-            other.transform.rotation = Quaternion.Euler(0, 90, 0);
 
             if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Cle")
             {
@@ -268,22 +265,34 @@ public class Player_scriptable : MonoBehaviour
             if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Brique")
             {
                 GetBrique();
+                endCard.SetActive(true);
             }
 
+        if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Fin")
+        {
+            SceneManager.LoadScene("Menu");
+            Debug.Log("Fin");
+        }
+
+        //other.enabled = false;
+
+        if (gameManager.GetComponent<GameManager>().CurrentCard.ID == 1)
+        {
+
+            other.transform.rotation = Quaternion.Euler(0, 90, 0);
             other.enabled = false;
+
+
         }
 
         if (gameManager.GetComponent<GameManager>().CurrentCard.ID == 2)
         {
 
-            gameManager.GetComponent<GameManager>().ChangeState();
-            state = gameManager.GetComponent<GameManager>().state;
-            gameManager.GetComponent<GameManager>().CurrentCard = other.gameObject.GetComponent<CardDisplay>().card;
-
-            other.enabled = true;
+            Debug.Log("Carte2");
 
 
         }
+
     }
 
 

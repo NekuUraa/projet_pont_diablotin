@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI CardDescription;
     public RawImage Cardartwork;
 
+    public int nombreTest= 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -48,26 +50,23 @@ public class GameManager : MonoBehaviour
 
         switch (state)
         {
-            case State.MOVE: 
-                
-                //Debug.Log("BOUGE");
+            case State.MOVE:
+
                 state = State.FLIP_CARD;
                 player.GetComponent<Player_scriptable>().state = state;
                 break;
             
             case State.FLIP_CARD:
 
-                //Debug.Log("FLIP");
                 state = State.UI_TURN;
-                player.GetComponent<Player_scriptable>().state = state; 
+                player.GetComponent<Player_scriptable>().state = state;
                 UItext.enabled = true;
                 Cardname.SetText(CurrentCard.name);
                 CardDescription.SetText(CurrentCard.description);
                 break;
             
             case State.UI_TURN:
-                    
-                //Debug.Log("UI TURN");
+
                 state = State.MOVE;
                 player.GetComponent<Player_scriptable>().state = state;
                 UItext.enabled = false;

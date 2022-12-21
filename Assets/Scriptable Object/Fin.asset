@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Fin
   description: 
-  ID: 2
+  ID: 4
   artwork: {fileID: 0}
   cardMaterial: {fileID: 0}

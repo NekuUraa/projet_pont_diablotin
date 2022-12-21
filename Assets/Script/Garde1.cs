@@ -7,9 +7,11 @@ public class Garde1 : MonoBehaviour
 
 
     public bool Direction = false;
-    public int distanceRay = 1;
+    public float NumDirection = 3;
 
-    public Player player;
+    public GameObject gameManager;
+    public GameManager gmScript;
+    public Player_scriptable player;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,7 @@ public class Garde1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void UpdateIA()
@@ -28,28 +30,33 @@ public class Garde1 : MonoBehaviour
         if (Direction)
         {
             
-            transform.position += Vector3.right * 1f;
+            transform.position += Vector3.right * NumDirection;
         }
 
 
         else
         {
-            transform.position += Vector3.left * 1f;
+            transform.position += Vector3.left * NumDirection;
         }
 
         Direction = !Direction;
     }
 
-    void OnTriggerEnter(Collider col)
+    void OnTriggerEnter(Collider other)
     {
-        if (col.GetComponent<Collider>().tag == "Player")
-        {
-            player.P_life -= 1;
-            Debug.Log(player.P_life);
 
-            player.checkDefaite();
-        }
+        
+
+        /*if (other.GetComponent<Collider>().CompareTag("Player"))
+        {
+            Debug.Log(Time.frameCount);
+
+            Debug.Log("Oui je touche le joueur");
+            player.ChangeLife(-1f);
+            //gameManager.ChangeState();
+        }*/
     }
+
 
     void FixedUpdate()
     {
