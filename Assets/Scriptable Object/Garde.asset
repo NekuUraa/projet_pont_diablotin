@@ -16,4 +16,4 @@ MonoBehaviour:
   description: 
   ID: 2
   artwork: {fileID: 2800000, guid: 1bc3b8da6f6c25645a41ff93c9b15abb, type: 3}
-  cardMaterial: {fileID: 0}
+  cardMaterial: {fileID: 2100000, guid: fe5dcc3a40afd26468e33dd1aa35a824, type: 2}

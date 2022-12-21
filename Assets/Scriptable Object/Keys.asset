@@ -16,4 +16,4 @@ MonoBehaviour:
   description: "Cl\xE9 servant a ouvrir une porte"
   ID: 1
   artwork: {fileID: 2800000, guid: 470ff4036d63f1a4a901bea2c11df548, type: 3}
-  cardMaterial: {fileID: 0}
+  cardMaterial: {fileID: 2100000, guid: 04290996737a9bc43898bd9cf046e3b3, type: 2}

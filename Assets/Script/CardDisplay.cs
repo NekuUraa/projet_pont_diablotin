@@ -11,9 +11,10 @@ public class CardDisplay : MonoBehaviour
     public Material material;
     void Start()
     {
-        MeshRenderer.material.SetTexture("_BaseMap", card.artwork);
+        //MeshRenderer.material.SetTexture("_BaseMap", card.artwork);
+        GetComponent<Renderer>().material = card.cardMaterial;
 
-       
+
 
     }
 
