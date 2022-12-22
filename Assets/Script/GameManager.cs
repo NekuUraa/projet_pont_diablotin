@@ -9,10 +9,9 @@ public enum State {MOVE, FLIP_CARD, UI_TURN}
 
 public class GameManager : MonoBehaviour
 {
-     
+    #region Variables
     public State state;
     public Player_scriptable player;
-    //public Player_scriptable playerScript;
     public Transform garde1;
     public Transform garde2; 
     public Card CurrentCard;
@@ -27,27 +26,9 @@ public class GameManager : MonoBehaviour
     public int nombreTest= 0;
 
     public GameObject[] listButtons;
+    #endregion
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        //ChangeState();
-    }
-
-    public void Update()
-    {
-
-
-        /*if (state == State.UI_TURN) 
-        {
-            if(Input.GetKeyUp(KeyCode.Space)) 
-            {
-                ChangeState();
-            }
-        }*/
-    }
-
+    #region Fonctions
     public void updateButtons()
     {
         listButtons[0].SetActive(player.moveLeft);
@@ -90,5 +71,5 @@ public class GameManager : MonoBehaviour
         }
 
     }
-
+    #endregion
 }

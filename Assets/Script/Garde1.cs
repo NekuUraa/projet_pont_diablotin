@@ -5,7 +5,7 @@ using UnityEngine;
 public class Garde1 : MonoBehaviour
 {
 
-
+    #region Variables
     public bool Direction = false;
     public float NumDirection = 3;
 
@@ -15,8 +15,9 @@ public class Garde1 : MonoBehaviour
 
     [SerializeField] float amplitude = 0.1f;
     [SerializeField] float duration = 10f;
+    #endregion
 
-
+    #region Fonctions
     public void UpdateIA()
     {
         if (Direction)
@@ -33,6 +34,7 @@ public class Garde1 : MonoBehaviour
 
         Direction = !Direction;
     }
+
 
     IEnumerator Shake(float delay)
     {
@@ -60,7 +62,9 @@ public class Garde1 : MonoBehaviour
 
         cam.transform.position = pos;
     }
+    #endregion
 
+    #region Collision
     void OnTriggerEnter(Collider other)
     {
 
@@ -77,10 +81,6 @@ public class Garde1 : MonoBehaviour
         }
     }
 
+    #endregion
 
-    void FixedUpdate()
-    {
-        
-    }
-
-    }
+}

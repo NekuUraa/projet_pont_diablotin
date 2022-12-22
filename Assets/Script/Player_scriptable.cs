@@ -7,7 +7,7 @@ using Unity.VisualScripting;
 
 public class Player_scriptable : MonoBehaviour
 {
-
+    #region Variables
     public GameObject gameManager;
     public GameManager gmScript;
     public State state;
@@ -15,9 +15,10 @@ public class Player_scriptable : MonoBehaviour
     public Card CurrentCard;
     public Garde1 garde1;
     public Garde1 carte1;
-    public Garde garde2;
     public GameObject endCard;
     public Camera cameraL;
+
+    
 
     public float P_Life = 3;
 
@@ -40,7 +41,10 @@ public class Player_scriptable : MonoBehaviour
 
     private float damageCooldownCounter = 0f;
 
-    
+    #endregion
+
+    #region Start/Update/FUpdate
+
     void Start()
     {
         cameraTargetPos = cameraL.transform.position;
@@ -51,9 +55,6 @@ public class Player_scriptable : MonoBehaviour
     
     void Update()
     {
-
-
-
         //CE QUI SE PASSE A CHAQUE FRAME A L'ETAT MOVE
         if(state == State.MOVE){
             Move();
@@ -74,7 +75,9 @@ public class Player_scriptable : MonoBehaviour
         gmScript.updateButtons();
     }
 
-   
+    #endregion
+
+    #region Déplacement
     public void MoveTactile(int direction)
     {
         Vector2 _targetPos = Vector2.zero;
@@ -183,10 +186,12 @@ public class Player_scriptable : MonoBehaviour
     {
         garde1.UpdateIA();
         carte1.UpdateIA();
-        garde2.UpdateIA();
 
     }
 
+    #endregion
+
+    #region Raycasting
     public void Raycasting()
     {
         RaycastHit hit;
@@ -269,6 +274,9 @@ public class Player_scriptable : MonoBehaviour
         }
     }
 
+    #endregion
+
+    #region Autres fonctions
     public void GetKeys()
     {
         hasKeys = true;
@@ -301,6 +309,9 @@ public class Player_scriptable : MonoBehaviour
         Debug.Log(P_Life);
     }
 
+    #endregion
+
+    #region Collisions
     public void OnTriggerEnter(Collider other)
     {
 
@@ -349,6 +360,8 @@ public class Player_scriptable : MonoBehaviour
         }
 
     }
+
+    #endregion
 
 
 
