@@ -11,18 +11,22 @@ public class GameManager : MonoBehaviour
 {
      
     public State state;
-    public GameObject player;
+    public Player_scriptable player;
+    //public Player_scriptable playerScript;
     public Transform garde1;
     public Transform garde2; 
     public Card CurrentCard;
 
     public Canvas UItext;
+    public Canvas UIMovement;
 
     public TextMeshProUGUI Cardname;
     public TextMeshProUGUI CardDescription;
     public Material Cardartwork;
 
     public int nombreTest= 0;
+
+    public GameObject[] listButtons;
 
 
     // Start is called before the first frame update
@@ -35,13 +39,21 @@ public class GameManager : MonoBehaviour
     {
 
 
-        if (state == State.UI_TURN) 
+        /*if (state == State.UI_TURN) 
         {
             if(Input.GetKeyUp(KeyCode.Space)) 
             {
                 ChangeState();
             }
-        }
+        }*/
+    }
+
+    public void updateButtons()
+    {
+        listButtons[0].SetActive(player.moveLeft);
+        listButtons[1].SetActive(player.moveForward);
+        listButtons[2].SetActive(player.moveRight);
+        listButtons[3].SetActive(player.moveBack);
     }
 
     public void ChangeState()
@@ -54,13 +66,14 @@ public class GameManager : MonoBehaviour
             case State.MOVE:
 
                 state = State.FLIP_CARD;
-                player.GetComponent<Player_scriptable>().state = state;
+                player.state = state;
                 break;
             
             case State.FLIP_CARD:
 
                 state = State.UI_TURN;
-                player.GetComponent<Player_scriptable>().state = state;
+                player.state = state;
+                UIMovement.enabled = false;
                 UItext.enabled = true;
                 Cardname.SetText(CurrentCard.name);
                 CardDescription.SetText(CurrentCard.description);
@@ -69,7 +82,8 @@ public class GameManager : MonoBehaviour
             case State.UI_TURN:
 
                 state = State.MOVE;
-                player.GetComponent<Player_scriptable>().state = state;
+                player.state = state;
+                UIMovement.enabled = true;
                 UItext.enabled = false;
                 break;
             
