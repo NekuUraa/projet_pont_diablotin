@@ -122,45 +122,6 @@ public class Player_scriptable : MonoBehaviour
                 break;
         }
 
-       /* //AVANCER
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            if (moveForward)
-            {
-                _targetPos.y = 1;
-            }
-            AfterMove();
-        }
-
-        //RECULER
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            if (moveBack)
-            {
-                _targetPos.y = -1;
-            }
-            AfterMove();
-        }
-
-        //DROITE
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            if (moveRight)
-            {
-                _targetPos.x = 1;
-            }
-            AfterMove();
-        }
-
-        //GAUCHE
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            if (moveLeft)
-            {
-                _targetPos.x = -1;
-            }
-            AfterMove();
-        }*/
 
         transform.position = new Vector3(transform.position.x + _targetPos.x * 3f, transform.position.y, transform.position.z + _targetPos.y * 3f);
         cameraTargetPos = new Vector3(cameraTargetPos.x + _targetPos.x * 3f, cameraTargetPos.y, cameraTargetPos.z + _targetPos.y * 3f);
@@ -322,7 +283,7 @@ public class Player_scriptable : MonoBehaviour
     {
         if(P_Life <= 0)
         {
-            //SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("GameOver");
          }
     }
 

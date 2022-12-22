@@ -13,17 +13,9 @@ public class Garde1 : MonoBehaviour
     public GameManager gmScript;
     public Player_scriptable player;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] float amplitude = 0.1f;
+    [SerializeField] float duration = 10f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void UpdateIA()
     {
@@ -42,19 +34,47 @@ public class Garde1 : MonoBehaviour
         Direction = !Direction;
     }
 
+    IEnumerator Shake(float delay)
+    {
+        Camera cam = Camera.main;
+        Vector3 pos = cam.transform.position;
+
+        while(delay> 0)
+        {
+            cam.transform.position = new Vector3(
+                pos.x + amplitude,
+                pos.y + amplitude,
+                pos.z + amplitude);
+
+            yield return new WaitForSeconds(0.05f);
+
+            cam.transform.position = new Vector3(
+                pos.x - amplitude,
+                pos.y - amplitude,
+                pos.z - amplitude);
+
+            yield return new WaitForSeconds(0.05f);
+
+            delay -= 1;
+        }
+
+        cam.transform.position = pos;
+    }
+
     void OnTriggerEnter(Collider other)
     {
 
         
 
-        /*if (other.GetComponent<Collider>().CompareTag("Player"))
+        if (other.GetComponent<Collider>().CompareTag("Player"))
         {
+            StartCoroutine(Shake(duration));
             Debug.Log(Time.frameCount);
 
             Debug.Log("Oui je touche le joueur");
             player.ChangeLife(-1f);
             //gameManager.ChangeState();
-        }*/
+        }
     }
 
 

@@ -1703,6 +1703,8 @@ MonoBehaviour:
   gameManager: {fileID: 48060120}
   gmScript: {fileID: 48060121}
   player: {fileID: 1619688663}
+  amplitude: 0.1
+  duration: 10
 --- !u!1 &374917190
 GameObject:
   m_ObjectHideFlags: 0
@@ -2136,6 +2138,8 @@ MonoBehaviour:
   gameManager: {fileID: 48060120}
   gmScript: {fileID: 48060121}
   player: {fileID: 1619688663}
+  amplitude: 0.1
+  duration: 1.5
 --- !u!1 &416093886 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 33c71d84e73273c4f8176c9339cf8017,
