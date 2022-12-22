@@ -16,4 +16,5 @@ MonoBehaviour:
   description: C'est une ruelle
   ID: 1
   artwork: {fileID: 2800000, guid: c887b50c7b3664343b35eee06452e1a6, type: 3}
+  artwork2: {fileID: 21300000, guid: ee44c9a79c705314ba4b868afcddc508, type: 3}
   cardMaterial: {fileID: 2100000, guid: fa8749f9f8a971c40ba968b829fdd08a, type: 2}

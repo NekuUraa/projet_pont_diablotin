@@ -276,8 +276,7 @@ MonoBehaviour:
   UIMovement: {fileID: 1885033512}
   Cardname: {fileID: 736933124}
   CardDescription: {fileID: 2125449930}
-  Cardartwork: {fileID: 2100000, guid: 84cfeca9d6cbb3f49b1a34ef887ac551, type: 2}
-  nombreTest: 0
+  CardArtwork: {fileID: 386294255}
   listButtons:
   - {fileID: 1140515577}
   - {fileID: 1800501461}
@@ -1844,7 +1843,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386294253}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -15}
+  m_LocalPosition: {x: 0, y: 0, z: -33.5}
   m_LocalScale: {x: 2.4060407, y: 4.044968, z: 1.2652}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1868,7 +1867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 84cfeca9d6cbb3f49b1a34ef887ac551, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -1876,7 +1875,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 1efcc67c8d38d6f4388334fa5e71d43c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5699,9 +5698,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
+  m_ReferencePixelsPerUnit: 10
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1400, y: 1080}
+  m_ReferenceResolution: {x: 1500, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -7490,7 +7489,6 @@ MonoBehaviour:
   CurrentCard: {fileID: 11400000, guid: 3d8d30d2360225e4a9153624a4eebeb6, type: 2}
   garde1: {fileID: 407718584}
   carte1: {fileID: 369120791}
-  garde2: {fileID: 0}
   endCard: {fileID: 906002060}
   cameraL: {fileID: 1961191693}
   P_Life: 3

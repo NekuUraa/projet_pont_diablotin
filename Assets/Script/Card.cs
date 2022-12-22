@@ -12,6 +12,8 @@ public class Card : ScriptableObject
 
     public Texture2D artwork;
 
+    public Sprite artwork2;
+
     public Material cardMaterial;
     #endregion
 }

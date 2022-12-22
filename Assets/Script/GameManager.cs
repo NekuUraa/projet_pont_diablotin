@@ -21,9 +21,9 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI Cardname;
     public TextMeshProUGUI CardDescription;
-    public Material Cardartwork;
+    //public Material Cardartwork;
+    public Image CardArtwork;
 
-    public int nombreTest= 0;
 
     public GameObject[] listButtons;
     #endregion
@@ -58,6 +58,8 @@ public class GameManager : MonoBehaviour
                 UItext.enabled = true;
                 Cardname.SetText(CurrentCard.name);
                 CardDescription.SetText(CurrentCard.description);
+                CardArtwork.sprite = CurrentCard.artwork2;
+
                 break;
             
             case State.UI_TURN:
