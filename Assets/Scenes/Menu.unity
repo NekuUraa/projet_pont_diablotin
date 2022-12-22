@@ -213,12 +213,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209211271}
-  m_LocalRotation: {x: -0.000012457373, y: -0.70710677, z: 0.70710677, w: -0.000012457373}
-  m_LocalPosition: {x: 0, y: 0, z: 472}
-  m_LocalScale: {x: 126.16102, y: 65.03419, z: 65.68976}
+  m_LocalRotation: {x: -0.0000124573735, y: -0.7071068, z: 0.7071068, w: -0.0000124573735}
+  m_LocalPosition: {x: -1199.5, y: -567.7, z: -0}
+  m_LocalScale: {x: 2.4182596, y: 1.2465781, z: 1.2591442}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 915873646}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: -270.001, z: -89.999}
 --- !u!1 &269654438
@@ -648,10 +648,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 2400, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -696,6 +696,7 @@ RectTransform:
   - {fileID: 1826564263}
   - {fileID: 269654439}
   - {fileID: 666301709}
+  - {fileID: 209211275}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
