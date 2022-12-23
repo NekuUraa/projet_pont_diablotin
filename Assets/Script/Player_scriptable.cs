@@ -23,6 +23,7 @@ public class Player_scriptable : MonoBehaviour
     public float P_Life = 3;
 
     public bool hasKeys = false;
+    public int keys = 0;
     public bool hasBrique = false;
 
     public bool moveForward = true;
@@ -205,6 +206,7 @@ public class Player_scriptable : MonoBehaviour
 
             if (hit.transform.tag == "Porte" && hasKeys == true)
             {
+                keys -=1;
                 Destroy(GameObject.FindWithTag("Porte"));
             }
         }
@@ -279,6 +281,7 @@ public class Player_scriptable : MonoBehaviour
     #region Autres fonctions
     public void GetKeys()
     {
+        keys += 1;
         hasKeys = true;
     }
 

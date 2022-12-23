@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI Cardname;
     public TextMeshProUGUI CardDescription;
     public TextMeshProUGUI PV_Player;
+    public TextMeshProUGUI Keys_Player;
     public Image CardArtwork;
 
 
@@ -58,6 +59,7 @@ public class GameManager : MonoBehaviour
                 CardDescription.SetText(CurrentCard.description);
                 CardArtwork.sprite = CurrentCard.artwork2;
                 PV_Player.text = player.P_Life.ToString();
+                Keys_Player.text = player.keys.ToString();
 
                 break;
             
