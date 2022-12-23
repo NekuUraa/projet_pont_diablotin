@@ -1274,7 +1274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4d21728ff483ea4ebfcc20dbe46f528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: ScriptableObject
+  sceneToLoad: Cinematique
   duration: 2
 --- !u!1 &1941929055
 GameObject:

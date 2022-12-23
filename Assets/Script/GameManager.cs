@@ -12,8 +12,6 @@ public class GameManager : MonoBehaviour
     #region Variables
     public State state;
     public Player_scriptable player;
-    public Transform garde1;
-    public Transform garde2; 
     public Card CurrentCard;
 
     public Canvas UItext;
@@ -21,7 +19,7 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI Cardname;
     public TextMeshProUGUI CardDescription;
-    //public Material Cardartwork;
+    public TextMeshProUGUI PV_Player;
     public Image CardArtwork;
 
 
@@ -59,6 +57,7 @@ public class GameManager : MonoBehaviour
                 Cardname.SetText(CurrentCard.name);
                 CardDescription.SetText(CurrentCard.description);
                 CardArtwork.sprite = CurrentCard.artwork2;
+                PV_Player.text = player.P_Life.ToString();
 
                 break;
             
