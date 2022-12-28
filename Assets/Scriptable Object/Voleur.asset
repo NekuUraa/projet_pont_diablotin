@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 530f5718e78c88942ab668c6d28c982c, type: 3}
-  m_Name: End
+  m_Name: Voleur
   m_EditorClassIdentifier: 
-  name: End
-  description: 
-  ID: 9
+  name: Voleur
+  description: "Vous croisez un voleur de loin. Apr\xE8s vous avoir vu, le voleur
+    vous supplie de l'\xE9pargner et vous donne en \xE9change une cl\xE9."
+  ID: 3
   artwork: {fileID: 0}
+  artwork2: {fileID: 0}
   cardMaterial: {fileID: 0}

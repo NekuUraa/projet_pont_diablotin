@@ -2843,7 +2843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bfb08f746d5c9b46b3932d07907947d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 3d8d30d2360225e4a9153624a4eebeb6, type: 2}
+  card: {fileID: 11400000, guid: 78f96b5c2ea46b6499bdbf247261e081, type: 2}
   MeshRenderer: {fileID: 622529959}
   material: {fileID: 0}
 --- !u!23 &622529959

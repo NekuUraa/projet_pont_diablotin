@@ -337,11 +337,16 @@ public class Player_scriptable : MonoBehaviour
                 endCard.SetActive(true);
             }
 
-        if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Fin")
+        if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Boulangerie")
         {
-            SceneManager.LoadScene("Menu");
-            Debug.Log("Fin");
+            P_Life += 1;
         }
+
+        if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Fin")
+            {
+                SceneManager.LoadScene("Menu");
+                Debug.Log("Fin");
+            }
 
         //other.enabled = false;
 
