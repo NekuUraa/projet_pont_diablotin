@@ -6,8 +6,6 @@ public class Garde1 : MonoBehaviour
 {
 
     #region Variables
-    public bool Direction = false;
-    public float NumDirection = 3;
 
     public GameObject gameManager;
     public GameManager gmScript;
@@ -18,22 +16,7 @@ public class Garde1 : MonoBehaviour
     #endregion
 
     #region Fonctions
-    public void UpdateIA()
-    {
-        if (Direction)
-        {
-            
-            transform.position += Vector3.right * NumDirection;
-        }
-
-
-        else
-        {
-            transform.position += Vector3.left * NumDirection;
-        }
-
-        Direction = !Direction;
-    }
+    
 
 
     IEnumerator Shake(float delay)
@@ -75,9 +58,7 @@ public class Garde1 : MonoBehaviour
             StartCoroutine(Shake(duration));
             Debug.Log(Time.frameCount);
 
-            Debug.Log("Oui je touche le joueur");
             player.ChangeLife(-1f);
-            //gameManager.ChangeState();
         }
     }
 

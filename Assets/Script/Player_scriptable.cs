@@ -13,8 +13,14 @@ public class Player_scriptable : MonoBehaviour
     public State state;
 
     public Card CurrentCard;
-    public Garde1 garde1;
-    public Garde1 carte1;
+    public Deplacement_npc garde1;
+    public Deplacement_npc carte1;
+    public Deplacement_npc garde2;
+    public Deplacement_npc carte2;
+    public Deplacement_npc garde3;
+    public Deplacement_npc carte3;
+    public Deplacement_npc garde4;
+    public Deplacement_npc carte4;
     public GameObject endCard;
     public Camera cameraL;
 
@@ -188,6 +194,15 @@ public class Player_scriptable : MonoBehaviour
         garde1.UpdateIA();
         carte1.UpdateIA();
 
+        garde2.UpdateIA2();
+        carte2.UpdateIA2();
+
+        garde3.UpdateIA();
+        carte3.UpdateIA();
+
+        garde4.UpdateIA2();
+        carte4.UpdateIA2();
+
     }
 
     #endregion
@@ -206,6 +221,7 @@ public class Player_scriptable : MonoBehaviour
 
             if (hit.transform.tag == "Porte" && hasKeys == true)
             {
+                hasKeys= false;
                 keys -=1;
                 Destroy(GameObject.FindWithTag("Porte"));
             }
@@ -239,6 +255,13 @@ public class Player_scriptable : MonoBehaviour
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * hit.distance, Color.green);
             //Debug.Log("Did Hit");
             moveLeft = false;
+
+            if (hit.transform.tag == "Porte" && hasKeys == true)
+            {
+                hasKeys = false;
+                keys -= 1;
+                Destroy(GameObject.FindWithTag("Porte"));
+            }
         }
         else
         {
@@ -328,25 +351,32 @@ public class Player_scriptable : MonoBehaviour
 
             if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Cle")
             {
-                GetKeys();
+                hasKeys= true;
+                keys += 1;
+            }
+
+            if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Voleur")
+            {
+                hasKeys= true;
+                keys += 1;
             }
 
             if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Brique")
+                {
+                    GetBrique();
+                    endCard.SetActive(true);
+                }
+
+            if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Boulangerie")
             {
-                GetBrique();
-                endCard.SetActive(true);
+                P_Life += 1;
             }
 
-        if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Boulangerie")
-        {
-            P_Life += 1;
-        }
-
-        if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Fin")
-            {
-                SceneManager.LoadScene("Menu");
-                Debug.Log("Fin");
-            }
+            if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Fin")
+                {
+                    SceneManager.LoadScene("Menu");
+                    Debug.Log("Fin");
+                }
 
         //other.enabled = false;
 

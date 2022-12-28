@@ -1864,16 +1864,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 369120784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 424d3ffe187a35a4b8444d4e7252ca05, type: 3}
+  m_Script: {fileID: 11500000, guid: 63aaf85c65353054497cfea7767ff6ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Direction: 0
   NumDirection: 3
-  gameManager: {fileID: 48060120}
-  gmScript: {fileID: 48060121}
-  player: {fileID: 1619688663}
-  amplitude: 0.1
-  duration: 10
 --- !u!1 &374917190
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,6 +2184,7 @@ GameObject:
   - component: {fileID: 407718581}
   - component: {fileID: 407718579}
   - component: {fileID: 407718578}
+  - component: {fileID: 407718585}
   - component: {fileID: 407718584}
   m_Layer: 0
   m_Name: Garde
@@ -2302,13 +2298,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 424d3ffe187a35a4b8444d4e7252ca05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Direction: 1
-  NumDirection: 3
   gameManager: {fileID: 48060120}
   gmScript: {fileID: 48060121}
   player: {fileID: 1619688663}
   amplitude: 0.1
   duration: 1.5
+--- !u!114 &407718585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407718577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63aaf85c65353054497cfea7767ff6ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Direction: 1
+  NumDirection: 3
 --- !u!1 &416093886 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 33c71d84e73273c4f8176c9339cf8017,
@@ -8103,7 +8111,7 @@ MonoBehaviour:
   gmScript: {fileID: 48060121}
   state: 0
   CurrentCard: {fileID: 11400000, guid: 3d8d30d2360225e4a9153624a4eebeb6, type: 2}
-  garde1: {fileID: 407718584}
+  garde1: {fileID: 407718585}
   carte1: {fileID: 369120791}
   endCard: {fileID: 906002060}
   cameraL: {fileID: 1961191693}
