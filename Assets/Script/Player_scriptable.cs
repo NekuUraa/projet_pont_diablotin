@@ -73,7 +73,7 @@ public class Player_scriptable : MonoBehaviour
     void FixedUpdate()
     {
         Raycasting();
-        gmScript.updateButtons();
+        //gmScript.updateButtons();
     }
 
     #endregion
@@ -317,12 +317,12 @@ public class Player_scriptable : MonoBehaviour
     #region Collisions
     public void OnTriggerEnter(Collider other)
     {
-
+            gameManager.GetComponent<GameManager>().CurrentCard = other.gameObject.GetComponent<CardDisplay>().card;
             gameManager.GetComponent<GameManager>().ChangeState();
             //Permet de changer de tours
+
             gameManager.GetComponent<GameManager>().ChangeState();
             state = gameManager.GetComponent<GameManager>().state;
-            gameManager.GetComponent<GameManager>().CurrentCard = other.gameObject.GetComponent<CardDisplay>().card;
             //other.gameObject.faisTesTrucsDeCarte();
             //other.gameObject.faisTesTrucsSp�ciaux();
 

@@ -53,8 +53,8 @@ public class GameManager : MonoBehaviour
 
                 state = State.UI_TURN;
                 player.state = state;
-                UIMovement.enabled = false;
                 UItext.enabled = true;
+                UIMovement.enabled = false;
                 Cardname.SetText(CurrentCard.name);
                 CardDescription.SetText(CurrentCard.description);
                 CardArtwork.sprite = CurrentCard.artwork2;
