@@ -4942,9 +4942,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 424d3ffe187a35a4b8444d4e7252ca05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
-  gmScript: {fileID: 0}
-  player: {fileID: 0}
+  gameManager: {fileID: 48060120}
+  gmScript: {fileID: 48060121}
+  player: {fileID: 1619688663}
   amplitude: 0.1
   duration: 1.5
 --- !u!114 &853348401
@@ -7213,11 +7213,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 424d3ffe187a35a4b8444d4e7252ca05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
-  gmScript: {fileID: 0}
-  player: {fileID: 0}
+  gameManager: {fileID: 48060120}
+  gmScript: {fileID: 48060121}
+  player: {fileID: 1619688663}
   amplitude: 0.1
-  duration: 10
+  duration: 1.5
 --- !u!1001 &1295499352
 PrefabInstance:
   m_ObjectHideFlags: 0
