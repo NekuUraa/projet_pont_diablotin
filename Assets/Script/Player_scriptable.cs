@@ -24,7 +24,12 @@ public class Player_scriptable : MonoBehaviour
     public GameObject endCard;
     public Camera cameraL;
 
-    
+    [SerializeField] private string sceneToLoad = "scene";
+
+
+
+
+
 
     public float P_Life = 3;
 
@@ -374,8 +379,7 @@ public class Player_scriptable : MonoBehaviour
 
             if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Fin")
                 {
-                    SceneManager.LoadScene("Menu");
-                    Debug.Log("Fin");
+                    SceneManager.LoadScene(sceneToLoad);
                 }
 
         //other.enabled = false;

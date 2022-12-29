@@ -317,9 +317,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Cette version n'est qu'un prototypage du jeu \"final\". Ne prenez donc
-    pas en consid\xE9ration les diff\xE9rents bug majeurs trouvable dans le jeu.\nDans
-    un soucis d'am\xE9lioration du jeu, pensez a remplir le document de retour de
-    playtest une fois le jeu fini.\nMerci pour vos retours."
+    pas en consid\xE9ration les diff\xE9rents bug majeurs trouvable dans le jeu.\nVous
+    jouez un diablotin devant r\xE9cup\xE9rer la brique finale du pont Valentr\xE9
+    afin qu'il ne soit jamais finalis\xE9."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -328,8 +328,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1034,7 +1034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

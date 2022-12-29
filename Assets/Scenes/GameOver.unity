@@ -707,7 +707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4d21728ff483ea4ebfcc20dbe46f528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: menu
+  sceneToLoad: Menu
   duration: 1.5
 --- !u!1 &1580917548
 GameObject:
