@@ -16,7 +16,7 @@ public class Button : MonoBehaviour
         while (delay > 0)
         {
 
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
             SceneManager.LoadScene(sceneToLoad);
             delay -= 1;
         }
