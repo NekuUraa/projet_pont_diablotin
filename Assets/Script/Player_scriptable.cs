@@ -358,13 +358,15 @@ public class Player_scriptable : MonoBehaviour
             {
                 hasKeys= true;
                 keys += 1;
-            }
+                other.enabled = false;
+        }
 
             if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Voleur")
             {
                 hasKeys= true;
                 keys += 1;
-            }
+                other.enabled = false;
+        }
 
             if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Brique")
                 {
@@ -375,7 +377,8 @@ public class Player_scriptable : MonoBehaviour
             if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Boulangerie")
             {
                 P_Life += 1;
-            }
+                other.enabled = false;
+        }
 
             if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Fin")
                 {
