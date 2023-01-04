@@ -7,7 +7,7 @@ public class Button : MonoBehaviour
 {
     #region Variables
     [SerializeField] private string sceneToLoad = "scene";
-    [SerializeField] private float duration = 1.5f;
+    [SerializeField] private float duration = 1f;
     #endregion
 
     #region Fonctions
