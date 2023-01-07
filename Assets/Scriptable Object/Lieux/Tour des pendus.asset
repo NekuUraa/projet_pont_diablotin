@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 530f5718e78c88942ab668c6d28c982c, type: 3}
-  m_Name: Sabbat
+  m_Name: Tour des pendus
   m_EditorClassIdentifier: 
-  name: Sabbat
-  description: "Vous passez \xE0 c\xF4t\xE9 d'un Sabbat de sorci\xE8re. Vous ne vous
-    attardez pas plus longtemps ici."
-  ID: 1
+  name: Tour des pendus
+  description: 
+  ID: 0
   artwork: {fileID: 0}
   artwork2: {fileID: 0}
   cardMaterial: {fileID: 0}

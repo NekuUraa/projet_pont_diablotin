@@ -390,7 +390,7 @@ public class Player_scriptable : MonoBehaviour
         if (gameManager.GetComponent<GameManager>().CurrentCard.ID == 1)
         {
 
-            other.transform.rotation = Quaternion.Euler(0, 90, 0);
+            //other.transform.rotation = Quaternion.Euler(0, 90, 0);
             other.enabled = false;
 
 

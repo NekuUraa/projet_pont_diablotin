@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 530f5718e78c88942ab668c6d28c982c, type: 3}
-  m_Name: Opium
+  m_Name: "Dioc\xE8se de Cahors"
   m_EditorClassIdentifier: 
-  name: Reste d'Opium
-  description: "Vous trouvez par terre un reste d'Opium, cela ne vous est d'aucune
-    utilit\xE9 dans votre qu\xEAte. "
-  ID: 1
+  name: "Dioc\xE8se de Cahors"
+  description: 
+  ID: 0
   artwork: {fileID: 0}
   artwork2: {fileID: 0}
   cardMaterial: {fileID: 0}
