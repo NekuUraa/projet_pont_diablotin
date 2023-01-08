@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 530f5718e78c88942ab668c6d28c982c, type: 3}
   m_Name: Voleur
   m_EditorClassIdentifier: 
-  name: Voleur
+  name: nom_voleur
   description: description_voleur
   ID: 3
   artwork: {fileID: 0}
-  artwork2: {fileID: 0}
-  cardMaterial: {fileID: 0}
+  artwork2: {fileID: 21300000, guid: bdb7cedf579d3ea4a82a1b98f0252421, type: 3}
+  cardMaterial: {fileID: 2100000, guid: 852d91cb3b05e154698165d33aedc5a3, type: 2}

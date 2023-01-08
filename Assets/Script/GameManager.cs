@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     public Canvas UItext;
     public Canvas UIMovement;
 
-    public TextMeshProUGUI Cardname;
+    public LocalizedText Cardname;
     public LocalizedText CardDescription;
     public TextMeshProUGUI PV_Player;
     public TextMeshProUGUI Keys_Player;
@@ -55,7 +55,8 @@ public class GameManager : MonoBehaviour
                 player.state = state;
                 UItext.enabled = true;
                 UIMovement.enabled = false;
-                Cardname.SetText(CurrentCard.name);
+                Cardname.Key = CurrentCard.name;
+                Cardname.UpdateText();
                 //CardDescription.SetText(CurrentCard.description);
                 CardDescription.Key = CurrentCard.description;
                 CardDescription.UpdateText();

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 530f5718e78c88942ab668c6d28c982c, type: 3}
   m_Name: "Cath\xE9drale Saint-\xC9tienne"
   m_EditorClassIdentifier: 
-  name: "Cath\xE9drale Saint-\xC9tienne"
-  description: 
-  ID: 0
+  name: nom_cathedrale
+  description: description_cathedrale
+  ID: 1
   artwork: {fileID: 0}
   artwork2: {fileID: 0}
   cardMaterial: {fileID: 0}

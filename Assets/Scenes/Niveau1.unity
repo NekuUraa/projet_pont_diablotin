@@ -705,7 +705,7 @@ MonoBehaviour:
   CurrentCard: {fileID: 11400000, guid: 3d8d30d2360225e4a9153624a4eebeb6, type: 2}
   UItext: {fileID: 1150542766}
   UIMovement: {fileID: 1885033512}
-  Cardname: {fileID: 736933124}
+  Cardname: {fileID: 736933126}
   CardDescription: {fileID: 2125449932}
   PV_Player: {fileID: 43655318}
   Keys_Player: {fileID: 561954686}
@@ -5814,6 +5814,7 @@ GameObject:
   - component: {fileID: 736933123}
   - component: {fileID: 736933125}
   - component: {fileID: 736933124}
+  - component: {fileID: 736933126}
   m_Layer: 5
   m_Name: Nom
   m_TagString: Untagged
@@ -5861,7 +5862,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nom du scriptable object
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5938,6 +5939,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736933122}
   m_CullTransparentMesh: 1
+--- !u!114 &736933126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736933122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edec5739ac9edad4983dcf1b034da6af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
 --- !u!1 &749416663
 GameObject:
   m_ObjectHideFlags: 0
@@ -20769,8 +20783,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

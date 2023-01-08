@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 530f5718e78c88942ab668c6d28c982c, type: 3}
   m_Name: Brique
   m_EditorClassIdentifier: 
-  name: Brique
+  name: nom_brique
   description: description_brique
   ID: 3
   artwork: {fileID: 2800000, guid: f33a1196445bd7e41a539cf778b75954, type: 3}

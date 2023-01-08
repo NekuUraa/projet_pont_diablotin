@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 530f5718e78c88942ab668c6d28c982c, type: 3}
   m_Name: Tour des pendus
   m_EditorClassIdentifier: 
-  name: Tour des pendus
-  description: 
-  ID: 0
+  name: nom_tour
+  description: description_tour
+  ID: 1
   artwork: {fileID: 0}
-  artwork2: {fileID: 0}
-  cardMaterial: {fileID: 0}
+  artwork2: {fileID: 21300000, guid: 83d6014c4a1e0cf448b98a9340044cc3, type: 3}
+  cardMaterial: {fileID: 2100000, guid: 0d7903ccaa5618d41bfeb1777dcfdfe0, type: 2}

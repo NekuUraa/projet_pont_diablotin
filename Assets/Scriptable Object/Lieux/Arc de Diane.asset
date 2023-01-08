@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 530f5718e78c88942ab668c6d28c982c, type: 3}
   m_Name: Arc de Diane
   m_EditorClassIdentifier: 
-  name: Arc de Diane
-  description: 
-  ID: 0
+  name: nom_arc
+  description: description_arc_de_diane
+  ID: 1
   artwork: {fileID: 0}
   artwork2: {fileID: 0}
   cardMaterial: {fileID: 0}

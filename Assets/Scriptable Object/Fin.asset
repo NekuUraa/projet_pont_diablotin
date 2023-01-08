@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 530f5718e78c88942ab668c6d28c982c, type: 3}
   m_Name: Fin
   m_EditorClassIdentifier: 
-  name: Fin
+  name: nom_fin
   description: 
   ID: 4
   artwork: {fileID: 0}

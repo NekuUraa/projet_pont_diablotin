@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 530f5718e78c88942ab668c6d28c982c, type: 3}
   m_Name: "\xC9glise Saint-Urcisse"
   m_EditorClassIdentifier: 
-  name: "\xC9glise Saint-Urcisse"
-  description: 
-  ID: 0
+  name: nom_eglise
+  description: description_eglise
+  ID: 1
   artwork: {fileID: 0}
   artwork2: {fileID: 0}
   cardMaterial: {fileID: 0}
