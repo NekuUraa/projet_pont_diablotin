@@ -24,6 +24,8 @@ public class Player_scriptable : MonoBehaviour
     public GameObject endCard;
     public Camera cameraL;
 
+    public AudioSource flip_card;
+
     [SerializeField] private string sceneToLoad = "scene";
 
 
@@ -351,10 +353,11 @@ public class Player_scriptable : MonoBehaviour
 
             gameManager.GetComponent<GameManager>().ChangeState();
             state = gameManager.GetComponent<GameManager>().state;
+            flip_card.Play();
             //other.gameObject.faisTesTrucsDeCarte();
             //other.gameObject.faisTesTrucsSp�ciaux();
 
-            if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Cle")
+        if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Cle")
             {
                 hasKeys= true;
                 keys += 1;

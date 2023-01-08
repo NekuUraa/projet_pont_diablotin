@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Boulangerie
   m_EditorClassIdentifier: 
   name: Boulangerie
-  description: A cette heure-ci les boulangeries font partie des seuls commerce a
-    pouvoir ouvrir. Vous en profiter pour voler un pain.
+  description: description_boulangerie
   ID: 3
   artwork: {fileID: 0}
   artwork2: {fileID: 0}

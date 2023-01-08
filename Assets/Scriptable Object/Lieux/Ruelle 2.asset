@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 530f5718e78c88942ab668c6d28c982c, type: 3}
-  m_Name: "Dioc\xE8se de Cahors"
+  m_Name: Ruelle 2
   m_EditorClassIdentifier: 
-  name: "Dioc\xE8se de Cahors"
-  description: 
-  ID: 0
-  artwork: {fileID: 0}
-  artwork2: {fileID: 0}
-  cardMaterial: {fileID: 0}
+  name: Ruelle
+  description: description_ruelle
+  ID: 1
+  artwork: {fileID: 2800000, guid: c887b50c7b3664343b35eee06452e1a6, type: 3}
+  artwork2: {fileID: 21300000, guid: aae0ad0ce1cbb18448b8ad1d7db9dfec, type: 3}
+  cardMaterial: {fileID: 2100000, guid: a11203a0ecb28d44ea81f2e106558d2d, type: 2}
