@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Brique
   m_EditorClassIdentifier: 
   name: Brique
-  description: "Brique a r\xE9cup\xE9rer"
+  description: description_brique
   ID: 3
   artwork: {fileID: 2800000, guid: f33a1196445bd7e41a539cf778b75954, type: 3}
   artwork2: {fileID: 21300000, guid: 1910f9acf33a57f49b059491eb544bfa, type: 3}

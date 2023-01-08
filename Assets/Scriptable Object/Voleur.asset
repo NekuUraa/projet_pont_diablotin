@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Voleur
   m_EditorClassIdentifier: 
   name: Voleur
-  description: "Vous croisez un voleur de loin. Apr\xE8s vous avoir vu, le voleur
-    vous supplie de l'\xE9pargner et vous donne en \xE9change une cl\xE9."
+  description: description_voleur
   ID: 3
   artwork: {fileID: 0}
   artwork2: {fileID: 0}

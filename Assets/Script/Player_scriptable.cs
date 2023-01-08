@@ -353,34 +353,41 @@ public class Player_scriptable : MonoBehaviour
 
             gameManager.GetComponent<GameManager>().ChangeState();
             state = gameManager.GetComponent<GameManager>().state;
-            flip_card.Play();
+            
             //other.gameObject.faisTesTrucsDeCarte();
             //other.gameObject.faisTesTrucsSp�ciaux();
 
         if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Cle")
             {
-                hasKeys= true;
+                flip_card.Play();
+                other.GetComponent<Animator>().Play("Card_Flip");
+                hasKeys = true;
                 keys += 1;
                 other.enabled = false;
         }
 
             if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Voleur")
             {
-                hasKeys= true;
+                flip_card.Play();
+                other.GetComponent<Animator>().Play("Card_Flip");
+                hasKeys = true;
                 keys += 1;
                 other.enabled = false;
         }
 
             if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Brique")
                 {
+
                     GetBrique();
                     endCard.SetActive(true);
                 }
 
             if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Boulangerie")
             {
-                P_Life += 1;
-                other.enabled = false;
+                    flip_card.Play();
+                    other.GetComponent<Animator>().Play("Card_Flip");
+                    P_Life += 1;
+                    other.enabled = false;
         }
 
             if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Fin")
@@ -393,6 +400,8 @@ public class Player_scriptable : MonoBehaviour
         if (gameManager.GetComponent<GameManager>().CurrentCard.ID == 1)
         {
 
+            flip_card.Play();
+            other.GetComponent<Animator>().Play("Card_Flip");
             //other.transform.rotation = Quaternion.Euler(0, 90, 0);
             other.enabled = false;
 
