@@ -366,7 +366,7 @@ public class Player_scriptable : MonoBehaviour
                 other.enabled = false;
         }
 
-            if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Voleur")
+            if (gameManager.GetComponent<GameManager>().CurrentCard.ID == 3)
             {
                 flip_card.Play();
                 other.GetComponent<Animator>().Play("Card_Flip");
@@ -375,14 +375,14 @@ public class Player_scriptable : MonoBehaviour
                 other.enabled = false;
         }
 
-            if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Brique")
+            if (gameManager.GetComponent<GameManager>().CurrentCard.ID == 5)
                 {
 
                     GetBrique();
                     endCard.SetActive(true);
                 }
 
-            if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Boulangerie")
+            if (gameManager.GetComponent<GameManager>().CurrentCard.ID == 6)
             {
                     flip_card.Play();
                     other.GetComponent<Animator>().Play("Card_Flip");
@@ -390,7 +390,7 @@ public class Player_scriptable : MonoBehaviour
                     other.enabled = false;
         }
 
-            if (gameManager.GetComponent<GameManager>().CurrentCard.name == "Fin")
+            if (gameManager.GetComponent<GameManager>().CurrentCard.ID == 9)
                 {
                     SceneManager.LoadScene(sceneToLoad);
                 }

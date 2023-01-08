@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Fin
   m_EditorClassIdentifier: 
   name: nom_fin
-  description: 
-  ID: 4
+  description: description_fin
+  ID: 9
   artwork: {fileID: 0}
   artwork2: {fileID: 21300000, guid: 3f2d83cf38274934b8b2359cab643c01, type: 3}
   cardMaterial: {fileID: 2100000, guid: e1d7a676871ff574b9671388f12e986e, type: 2}

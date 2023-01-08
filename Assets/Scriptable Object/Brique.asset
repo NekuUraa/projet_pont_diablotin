@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: nom_brique
   description: description_brique
-  ID: 3
+  ID: 5
   artwork: {fileID: 2800000, guid: f33a1196445bd7e41a539cf778b75954, type: 3}
   artwork2: {fileID: 21300000, guid: 37b0970dee82e814b973e8df2cce57f9, type: 3}
   cardMaterial: {fileID: 2100000, guid: b8747c95deb7cfe40b934c3376ccfce6, type: 2}

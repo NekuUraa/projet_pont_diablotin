@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: nom_boulangerie
   description: description_boulangerie
-  ID: 3
+  ID: 6
   artwork: {fileID: 0}
   artwork2: {fileID: 21300000, guid: 25088d1c1827e9642948b390bc8f7284, type: 3}
   cardMaterial: {fileID: 2100000, guid: f631f5a2fb79ff74e9b83818fd319654, type: 2}

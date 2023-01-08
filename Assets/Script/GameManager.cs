@@ -57,7 +57,6 @@ public class GameManager : MonoBehaviour
                 UIMovement.enabled = false;
                 Cardname.Key = CurrentCard.name;
                 Cardname.UpdateText();
-                //CardDescription.SetText(CurrentCard.description);
                 CardDescription.Key = CurrentCard.description;
                 CardDescription.UpdateText();
                 CardArtwork.sprite = CurrentCard.artwork2;

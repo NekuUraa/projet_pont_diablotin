@@ -10,8 +10,18 @@ using UnityEngine;
 */
 public class LocalizedText : MonoBehaviour
 {
+
+    public bool loadOnStart;
     
     public string Key;//key to get from csv
+
+    private void Start()
+    {
+        if (loadOnStart)
+        {
+            UpdateText();
+        }
+    }
     public void UpdateText()
     {
         Debug.Log("oui");
