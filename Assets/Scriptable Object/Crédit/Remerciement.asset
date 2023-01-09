@@ -16,5 +16,5 @@ MonoBehaviour:
   description: r_description
   ID: 1
   artwork: {fileID: 0}
-  artwork2: {fileID: 0}
-  cardMaterial: {fileID: 0}
+  artwork2: {fileID: 21300000, guid: 8ce2f941457e08644b716fe81e799759, type: 3}
+  cardMaterial: {fileID: 2100000, guid: 44a1e233bb50e5446b06698cda8dc399, type: 2}
