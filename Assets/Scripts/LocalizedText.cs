@@ -29,6 +29,7 @@ public class LocalizedText : MonoBehaviour
         string temp = LocalizationSystem.instance.GetLocalizedValue(Key);
         if (!string.IsNullOrEmpty(temp))//if value is valid
         {
+            temp = temp.Replace('@', '\n');
             Text.SetText(temp);
         }
         else//invalid

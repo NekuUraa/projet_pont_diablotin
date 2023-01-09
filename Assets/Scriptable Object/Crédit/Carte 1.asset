@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 530f5718e78c88942ab668c6d28c982c, type: 3}
+  m_Name: Carte 1
+  m_EditorClassIdentifier: 
+  name: credit_1_name
+  description: credit_1
+  ID: 1
+  artwork: {fileID: 0}
+  artwork2: {fileID: 21300000, guid: 1efcc67c8d38d6f4388334fa5e71d43c, type: 3}
+  cardMaterial: {fileID: 2100000, guid: 19ecde5430357034bbc92e740e93b818, type: 2}

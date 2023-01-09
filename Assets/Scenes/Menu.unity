@@ -177,7 +177,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8c93b77db36cac94ea14eecc0e9a9e08, type: 2}
+  - {fileID: 2100000, guid: 5727d279b79f7724d9452bffbefaae0c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -215,8 +215,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209211271}
   m_LocalRotation: {x: -0.0000124573735, y: -0.7071068, z: 0.7071068, w: -0.0000124573735}
-  m_LocalPosition: {x: -2, y: -0, z: 2}
-  m_LocalScale: {x: 4.5759683, y: 2.3588452, z: 2.3826234}
+  m_LocalPosition: {x: 0.1, y: 1, z: 2}
+  m_LocalScale: {x: 3.1379683, y: 1.5040233, z: 1.5191846}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -503,7 +503,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -473.2, y: 373.66}
+  m_AnchoredPosition: {x: -259, y: 373.66}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &397584013
@@ -526,7 +526,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Projet pont du diable
+  m_text: Pont du Diable
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -589,7 +589,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -484.34714, w: 0}
+  m_margin: {x: 0, y: 0, z: -354.1095, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

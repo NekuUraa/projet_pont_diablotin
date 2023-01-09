@@ -5951,6 +5951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edec5739ac9edad4983dcf1b034da6af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadOnStart: 0
   Key: 
 --- !u!1 &749416663
 GameObject:
@@ -15752,7 +15753,7 @@ MonoBehaviour:
   endCard: {fileID: 906002060}
   cameraL: {fileID: 1961191693}
   flip_card: {fileID: 975620649}
-  sceneToLoad: Menu
+  sceneToLoad: Credit
   P_Life: 3
   hasKeys: 0
   keys: 0
@@ -18496,7 +18497,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: -90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.10347819, y: -0.1}
+  m_AnchoredPosition: {x: -0.10347819, y: -0.05}
   m_SizeDelta: {x: 1144, y: 584}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &1904295933 stripped
@@ -20845,6 +20846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edec5739ac9edad4983dcf1b034da6af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadOnStart: 0
   Key: 
 --- !u!1 &2125507685 stripped
 GameObject:

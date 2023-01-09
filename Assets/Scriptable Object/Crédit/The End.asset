@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 530f5718e78c88942ab668c6d28c982c, type: 3}
+  m_Name: The End
+  m_EditorClassIdentifier: 
+  name: f_name
+  description: f_description
+  ID: 1
+  artwork: {fileID: 0}
+  artwork2: {fileID: 21300000, guid: 3f2d83cf38274934b8b2359cab643c01, type: 3}
+  cardMaterial: {fileID: 2100000, guid: 64296b3691ebc8c409c9cceb9c90e9f7, type: 2}
